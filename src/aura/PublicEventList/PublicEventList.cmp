@@ -1,0 +1,35 @@
+<aura:component controller="PublicEventListController">
+	
+	<aura:attribute name="events" type="Public_Event__c[]" />
+
+	<aura:registerEvent name="navSelected" type="c:NavigateToComponent" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:handler name="itemSelected" event="c:ListItemClicked" action="{!c.loadEvent}" />
+
+	<div>
+		<span class="slds-text-heading--large">Conference Pro -- List</span>
+		<hr style="width:100%"/>
+	</div>
+
+	<div>
+		<ui:button aura:id="toHomeButton" buttonTitle="Home" class="slds-button slds-button--neutral" label="Home" press="{!c.backHome}"/>
+		<table class="slds-table slds-table--bordered">
+			<thead>
+				<tr class="slds-text-heading--label">
+					<th class="slds-cell-shrink" scope="col">Event</th>
+				</tr>
+			</thead>
+			<tbody>
+				<aura:iteration items="{!v.events}" var="evt">
+					<tr class="slds-hint-parent">
+						<th class="slds-row-select">
+							<c:ClickableListItem objectType="Public_Event__c" objectId="{!evt.Id}" objectName="{!evt.Name}" />
+						</th>
+					</tr>
+				</aura:iteration>
+			</tbody>
+		</table>
+	</div>
+
+</aura:component>

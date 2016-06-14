@@ -1,0 +1,24 @@
+<apex:page showHeader="true" standardController="Public_Event__c">
+    <apex:includeLightning />
+    
+    <div id="myDivId">
+    </div>
+    <script>
+        var myUserContext = "{!$User.UITheme}";
+  
+        $Lightning.use("c:ConferencePro", function() {
+        $Lightning.createComponent(
+            "c:BaseComponent",
+            { 
+                UserContext: myUserContext,
+                appName: "ConferencePro"
+            },
+            "myDivId",
+            function(cmp) {
+                console.log('component created');
+                console.log(cmp);
+            });
+        });
+     </script>
+
+</apex:page>

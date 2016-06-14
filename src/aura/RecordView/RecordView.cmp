@@ -1,0 +1,4 @@
+<aura:component implements="force:appHostable" >
+	<aura:attribute name="recordId" type="String"/>
+	<force:recordView recordId="{!v.recordId}" type="MINI"/>
+</aura:component>

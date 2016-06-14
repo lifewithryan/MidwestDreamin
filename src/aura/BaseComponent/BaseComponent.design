@@ -1,0 +1,3 @@
+<design:component label="App Base">
+	<design:attribute name="appName" label="App Name" description="Application Name as configured in Custom Settings" />
+</design:component>

@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" controller="BaseComponentController">
+
+	<!-- attribute declarations here -->
+	<aura:attribute name="appName" type="String" /><!-- can be null -->
+	<aura:attribute name="activeComponent" type="String" />
+
+	<!-- event handlers here -->
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:handler event="c:NavigateToComponent" action="{!c.loadComponent}" />
+
+	
+
+	<div class="slds" style="padding: 10px;">
+		{!v.body}
+	</div>
+
+</aura:component>

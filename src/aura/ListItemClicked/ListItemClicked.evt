@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="Fires when a user selected an item display by a ClickableListItem">
+
+        <aura:attribute name="objectId" type="String" />
+
+</aura:event>

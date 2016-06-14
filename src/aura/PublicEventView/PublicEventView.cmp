@@ -1,0 +1,23 @@
+<aura:component controller="PublicEventListController">
+	
+	<aura:attribute name="eventId" type="String" />
+	<aura:attribute name="publicEvent" type="Public_Event__c"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	<div>
+		<span class="slds-text-heading--large">{!v.publicEvent.Name}</span>
+		<hr style="width:100%"/>
+	</div>
+	<ui:button aura:id="toHomeButton" buttonTitle="Home" class="slds-button slds-button--neutral" label="Home" press="{!c.backHome}"/>
+	<div>
+		<ui:outputText class="slds-form-element__label" value="Event Start:"/><ui:outputDateTime value="{!v.publicEvent.Event_Start__c}"/>
+		<br/>
+		<ui:outputText class="slds-form-element__label" value="Event End:"/><ui:outputDateTime value="{!v.publicEvent.Event_End__c}"/>
+		<br/>
+		<ui:outputText class="slds-form-element__label" value="Venue:"/><ui:outputText value="{!v.publicEvent.Venue__r.Name}"/>
+		<br/>
+        
+	</div>
+
+</aura:component>

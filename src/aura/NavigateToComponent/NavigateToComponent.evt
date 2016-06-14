@@ -1,0 +1,6 @@
+<aura:event type="APPLICATION" description="Event template" >
+
+        <aura:attribute name="targetCmp" type="Aura.Component" />
+        <aura:attribute name="attributeList" type="JSON" /><!-- JSON String -->
+
+</aura:event>

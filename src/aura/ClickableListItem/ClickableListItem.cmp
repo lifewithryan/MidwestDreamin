@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+
+        <aura:attribute name="objectType" type="String" />
+        <aura:attribute name="objectId" type="String" />
+        <aura:attribute name="objectName" type="String" />
+        <!-- maybe allow dev to pass in object style as well? -->
+        <aura:registerEvent name="itemSelected" type="c:ListItemClicked" />
+
+        <a href="#" onclick="{!c.listItemClicked}">{!v.objectName}</a>
+
+</aura:component>

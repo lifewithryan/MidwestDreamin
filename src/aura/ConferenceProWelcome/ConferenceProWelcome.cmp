@@ -1,0 +1,14 @@
+<aura:component >
+	
+	<aura:registerEvent name="navSelected" type="c:NavigateToComponent" />
+
+	<div>
+		<span class="slds-text-heading--large">Conference Pro</span>
+		<hr style="width:100%"/>
+	</div>
+
+	<a href="#" onclick="{!c.viewEventList}">Events</a>
+	<br/>
+	<a href="#" onclick="{}">Venues</a>
+
+</aura:component>
